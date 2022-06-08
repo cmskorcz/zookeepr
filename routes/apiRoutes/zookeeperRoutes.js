@@ -9,7 +9,7 @@ const {
 
 } = require('../../lib/zookeepers')
 
-const { zookeepers } = require('../../data/zookeepers.json')
+const { zookeepers } = require('../../data/zookeepers')
 
 router.get('/zookeepers', (req, res) => {
 
@@ -49,9 +49,9 @@ router.post('/zookeepers', (req, res) => {
 
     } else {
 
-        const zookeeper = createNewZookeeper(req.body, zookeepers)
+        const newZookeeper = createNewZookeeper(req.body, zookeepers)
 
-        res.json(zookeeper)
+        res.json(newZookeeper)
 
     }
 
